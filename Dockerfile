@@ -1,5 +1,5 @@
 # Start from a base alpine image
-FROM docker:dind
+FROM docker:latest
 
 # install ssh-agent, git, docker, maven
 RUN apk add --no-cache \
@@ -24,6 +24,4 @@ RUN set -x \
         && apk add --no-cache \
                 openjdk8="$JAVA_ALPINE_VERSION" \
         && [ "$JAVA_HOME" = "$(docker-java-home)" ]
-
-VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 
