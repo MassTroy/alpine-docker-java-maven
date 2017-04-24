@@ -1,4 +1,4 @@
-# apline-docker-java-maven
+# alpine-docker-java-maven
 
 A docker image based on alpine linux useful for builds with the following installed:
 
