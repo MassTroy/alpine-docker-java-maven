@@ -1,10 +1,9 @@
 # Start from a base alpine image
-FROM alpine:latest
+FROM docker:dind
 
 # install ssh-agent, git, docker, maven
 RUN apk add --no-cache \
     git \
-    docker \
     maven \
     bash \
     curl wget
